@@ -113,10 +113,9 @@ const AdditionalButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  a {
-    text-decoration: none;
+  :hover {
+    cursor: pointer;
   }
-
   @media (max-width: ${cssBreakPoint.tablet}) {
     padding-top: 60px;
     bottom: 0;
@@ -140,9 +139,16 @@ const MainA: FC<IMainA> = () => {
   const animation = [
     useScrollFadeIn('up', 1, 0),
     useScrollFadeIn('up', 1, 0.5),
-    useScrollFadeIn('up', 1, 1)
+    useScrollFadeIn('up', 1, 1),
   ]
-
+  const clickToMove = (e: React.MouseEvent) => {
+    let href = (e.target as HTMLInputElement).dataset.nav
+    const position = document.querySelector(`#${href}`) as HTMLElement
+    window.scrollTo({
+      top: position ? position.offsetTop : 0,
+      behavior: 'smooth',
+    })
+  }
   return (
     <MainContainer id="main">
       <Container>
@@ -160,9 +166,7 @@ const MainA: FC<IMainA> = () => {
           </BottomContent>
         </ContentBox>
         <AdditionalButton>
-          <a href={'#success_story'}>
-            <ScrollIcon {...animation[2]}/>
-          </a>
+          <ScrollIcon data-nav="success_story" onClick={clickToMove} {...animation[2]} />
         </AdditionalButton>
       </Container>
     </MainContainer>

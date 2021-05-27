@@ -87,6 +87,7 @@ const ToolTipImg = styled.img`
   width: 20px;
   text-align: center;
   vertical-align: baseline;
+  cursor: pointer;
 `
 const MobileBlock = styled.span`
   @media (max-width: ${cssBreakPoint.mobileMd}) {

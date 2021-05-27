@@ -9,6 +9,9 @@ const List = styled.div`
   border-bottom: 1px solid var(--white);
   display: flex;
   justify-content: space-between;
+  :hover {
+    color: var(--cornflower);
+  }
   .rotate {
     transform: rotate(180deg);
   }
@@ -49,6 +52,9 @@ const Detail = styled.div`
   }
 `
 const Div = styled.div`
+  :hover {
+    cursor: pointer;
+  }
   &:not(:first-child) .register {
     display: none;
   }
