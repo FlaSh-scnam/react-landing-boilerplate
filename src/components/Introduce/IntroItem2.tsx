@@ -75,23 +75,22 @@ const DescBox = styled.div<DescBoxProps>`
   letter-spacing: -0.7px;
   flex-grow: 0;
   span {
-    margin-right: .2rem;
+    margin-right: 0.2rem;
   }
   .google::before {
-    content: "co";
+    content: 'co';
     color: transparent;
     background: url(${(props: any): string => props.imgUrl.google}) center no-repeat;
   }
   .facebook::before {
-    content: "con";
+    content: 'con';
     color: transparent;
     background: url(${(props: any): string => props.imgUrl.facebook}) center no-repeat;
   }
   .naver::before {
-    content: "con";
+    content: 'con';
     color: transparent;
     background: url(${(props: any): string => props.imgUrl.naver}) center no-repeat;
-  }
   }
 `
 const Bottom = styled.div`

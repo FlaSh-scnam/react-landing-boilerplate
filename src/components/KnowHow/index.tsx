@@ -27,12 +27,6 @@ const KnowHowContainer = styled(Container)`
     line-height: normal;
     letter-spacing: -2.5px;
     margin: 0 auto;
-    @media (max-width: ${cssBreakPoint.mobileMd}) {
-      font-size: 40px;
-    }
-    @media (max-width: ${cssBreakPoint.mobileXs}) {
-      font-size: 35px;
-    }
     background: linear-gradient(
       to bottom,
       #fafafa 0,
@@ -42,6 +36,12 @@ const KnowHowContainer = styled(Container)`
       #fafafa 66%,
       #fafafa 100%
     );
+    @media (max-width: ${cssBreakPoint.mobileMd}) {
+      font-size: 40px;
+    }
+    @media (max-width: ${cssBreakPoint.mobileXs}) {
+      font-size: 35px;
+    }
   }
   .sub-title {
     margin-top: 0.8rem;

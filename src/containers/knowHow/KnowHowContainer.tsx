@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import KnowHow from 'components/KnowHow'
 
 const data: {
@@ -27,7 +27,7 @@ const data: {
   },
 ]
 
-const KnowHowContainer = () => {
+const KnowHowContainer = (): ReactElement => {
   return <KnowHow data={data} />
 }
 

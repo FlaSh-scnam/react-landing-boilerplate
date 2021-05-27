@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, ReactElement } from 'react'
 import Faq from '../../components/Faq'
 
 type itemProps = {
@@ -69,7 +69,7 @@ const data: itemProps = [
 ]
 interface FaqContainerProps {}
 
-const FaqContainer: FC<FaqContainerProps> = () => {
+const FaqContainer: FC<FaqContainerProps> = (): ReactElement => {
   // 추후 api를 통해 변경이 용이토록 container setting
   return <Faq contents={data} />
 }

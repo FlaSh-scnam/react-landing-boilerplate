@@ -25,10 +25,6 @@ const InnerLeft = styled.div`
   justify-content: space-between;
   height: 9rem;
   margin-left: 10px;
-  @media (max-width: ${cssBreakPoint.tablet}) {
-    padding-left: 1.5rem;
-    margin: 0;
-  }
   p:nth-child(1) {
     font-family: Roboto;
     font-size: 18px;
@@ -44,6 +40,10 @@ const InnerLeft = styled.div`
   }
   p:last-child {
     font-family: NotoSansKR;
+  }
+  @media (max-width: ${cssBreakPoint.tablet}) {
+    padding-left: 1.5rem;
+    margin: 0;
   }
 `
 const InnerRight = styled.div`
